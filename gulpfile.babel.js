@@ -7,7 +7,7 @@ const mozjpeg = require('imagemin-mozjpeg');
 const changed = require('gulp-changed');
 
 gulp.task('image-min', () => {
-  return gulp.src(srcDir + '/**/*.(png|jpg|gif|svg)')
+  return gulp.src(srcDir + '/**/*.{png,jpg,gif,svg}')
     .pipe(changed(distDir))
     .pipe(imagemin([
       pngquant({
